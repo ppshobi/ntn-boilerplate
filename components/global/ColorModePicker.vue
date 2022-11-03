@@ -1,6 +1,7 @@
 <template>
   <div class="fixed bottom-0 left-0 m-3">
-    <component :is="`icon-${color}`" @click="changeColorMode" @keypress.enter="changeColorMode" title="Toggle background color" tabindex="0" />
+    <component :is="`icon-${color}`" @click="changeColorMode" @keypress.enter="changeColorMode"
+      title="Toggle background color" tabindex="0" />
   </div>
 </template>
 
@@ -70,10 +71,12 @@ export default {
     border-color: var(--border-color-secondary);
     @apply text-white;
   }
+
   &.selected {
     color: var(--color-primary);
   }
 }
+
 .light {
   & .icon {
     background-color: var(--bg);
@@ -86,5 +89,4 @@ export default {
     }
   }
 }
-
 </style>
